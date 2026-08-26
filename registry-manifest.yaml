@@ -1,0 +1,32 @@
+# Registry manifest for dea-ontology.
+# Active registration through Assessment-Models/assessment-registry waits on CR-AR-01 landing (Phase 1).
+# Until then, this manifest exists locally for forward compatibility.
+
+asset:
+  id: dea-ontology
+  class: ontological
+  title: "Enterprise Ontology"
+  summary: "Canonical grounding repository for formal OWL/RDF ontology practice (upper-ontology conventions, ontology-engineering patterns, ontology lifecycle) and the means to author sector-, industry-, and sub-sector-specific Enterprise Ontologies (e.g. Enterprise Business Ontology, Enterprise Technology Ontology)."
+  source:
+    repo: technehub-labs/dea-ontology
+    url: https://github.com/technehub-labs/dea-ontology
+  contract:
+    opendea_version: "1.0.0"
+    spec_versions:
+      - cr: "CR-EO-01"
+        version: "0.1.0-proposal"
+  status: candidate
+  dependencies:
+    - id: dea-architecture-framework
+      kind: references
+    - id: dea-metaframework
+      kind: axiom-source
+    - id: dea-concepts-model
+      kind: references
+    - id: dea-metamodel
+      kind: conforms-to
+    - id: dea-semantic-architecture
+      kind: sibling
+    - id: dea-catalog-ontologies
+      kind: promotion-candidate
+      note: "Phase 4 promotes this repo under EO umbrella; content remains unchanged until then."
