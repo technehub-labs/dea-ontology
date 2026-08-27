@@ -17,10 +17,23 @@ jobs:
           done
           for d in axioms patterns sectors change-requests; do
             test -d "$d" || (echo "missing dir: $d" && exit 1)
-            test -f "$d/README.md" || (echo "missing index: $d/README.md" && exit 1)
+            # Federation convention: each directory ships an index file (README.md or *-INDEX.md)
+            test -f "$d/README.md" -o -f "$d/PATTERN-INDEX.md" -o -f "$d/SECTOR-INDEX.md" || (echo "missing index: $d/{README.md,PATTERN-INDEX.md,SECTOR-INDEX.md}" && exit 1)
+          done
+          # Phase 1 — three axiom files must be present
+          for f in axioms/axiom-01-ontological-commitment.md axioms/axiom-02-upper-ontology-pluralism.md axioms/axiom-03-ontology-lifecycle-governance.md; do
+            test -f "$f" || (echo "missing: $f" && exit 1)
           done
           test -f change-requests/CR-EO-01.md || (echo "missing: change-requests/CR-EO-01.md" && exit 1)
           test -f change-requests/CR-EO-01-xref-dea-catalog-ontologies.md || (echo "missing: change-requests/CR-EO-01-xref-dea-catalog-ontologies.md" && exit 1)
+      - name: Validate ontology commitment header in axiom files
+        run: |
+          # Each axiom file must cite ECF cells (derivation table) and have a Phase 1 status line
+          for f in axioms/axiom-*.md; do
+            grep -q "Phase 1" "$f" || (echo "missing Phase 1 status: $f" && exit 1)
+            grep -qi "ECF derivation" "$f" || (echo "missing ECF derivation section: $f" && exit 1)
+          done
+          echo "axiom files validated"
       - name: Validate registry manifest (lightweight YAML lint)
         run: |
           python3 -c "import yaml,sys; d=yaml.safe_load(open('registry-manifest.yaml')); assert d['asset']['class']=='ontological'; print('manifest ok')"
