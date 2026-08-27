@@ -2,7 +2,25 @@
 
 ## [Unreleased]
 
-### Phase 1 (CR-EO-01) — Grounding docs
+### Phase 2 proposal (CR-EO-02) — Telecom-Operator Enterprise Ontology
+
+#### Added
+- **`change-requests/CR-EO-02.md`** — Telecom-Operator Enterprise Ontology (Phase 2) spec. Implements the 2026-08-27 directive: two-axis split (business-area / technology-area) + technology-area sub-split (natively-reusable big topics / technology-type / domain-specific). Includes the explicit **Phasing rule** (PR-1 visible deliverable, PR-2 visible evolution path, PR-3 visible split, PR-4 visible evolution path before content lands) per the directive's "methodical and incremental" requirement. Paired with CR-ESA-02 (cross-pillar lock-step).
+
+### Pending (per CR-EO-02 phase plan)
+
+- Phase 2.1 — Sector README + sector-declaration tenet (area + reusability framework; no axiom content).
+- Phase 2.2 — Sector tenet extensions (extensions to base Tenets 1, 2, 3 with ECF derivation; upper-ontology choice).
+- Phase 2.3a — Business-area ontology axioms (Customer, Product, Service, Order, Bill, Regulatory Obligation).
+- Phase 2.3b — Technology-area reusable big topics (≤5–8 topics; selection criteria cited).
+- Phase 2.3c — Technology-area telecom-type axioms (3GPP NFs, TMForum SID entities, GSMA identifiers).
+- Phase 2.3d — Technology-area domain-specific stubs (namespace + README only).
+- Phase 2.4 — Cross-ontology mappings (TMForum SID, 3GPP TS 28.x, GSMA — per Pick 3 default).
+- Phase 2.5 — Per-file `oecc:` headers (incremental; included in 2.3a–2.3d).
+- Phase 2.6 — `registry-entry.yaml` + AR entry (cross-repo PR).
+- Phase 2.7 — Paired ESA-02 semantic-layer content (cross-repo PR).
+
+### Phase 1 (CR-EO-01) — Grounding docs — MERGED (`802c183`, PR #1)
 
 #### Added
 - **Full `CHARTER.md`** — core meaning, OpenDEA placement, scope and non-scope, sibling relationships, authority boundaries, reversibility, naming taste, ECF derivation (§1–8).
