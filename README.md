@@ -1,7 +1,7 @@
 # dea-ontology
 
 > **Canonical grounding repository for Enterprise Ontology (EO) in the OpenDEA federation.**
-> Status: **proposed pillar** — see [`change-requests/CR-EO-01.md`](./change-requests/CR-EO-01.md).
+> Status: **Phase 1 landed** — grounding docs (CHARTER + TENETS + three axioms with ECF derivation). See [`change-requests/CR-EO-01.md`](./change-requests/CR-EO-01.md).
 
 This repository grounds **how an enterprise authors, governs, and consumes formal ontologies** — upper-ontology conventions, ontology-engineering practice, ontology lifecycle, and sector-specific Enterprise Ontologies (e.g. Enterprise Business Ontology, Enterprise Technology Ontology). It is the discipline-of-formal-modelling sibling to [`technehub-labs/dea-semantic-architecture`](https://github.com/technehub-labs/dea-semantic-architecture).
 
@@ -13,9 +13,9 @@ This repository grounds **how an enterprise authors, governs, and consumes forma
 
 ## What lives here
 
-- `CHARTER.md` — core meaning, scope, and non-scope of EO within OpenDEA. **(Full prose lands in Phase 1.)**
-- `TENETS.md` — numbered axioms of the discipline, derived from the ECF 7×7 axiom grid. **(Full prose lands in Phase 1.)**
-- `axioms/` — three axiom files, each with derivation table to ECF. **(Stub prose in Phase 1.)**
+- `CHARTER.md` — core meaning, scope, and non-scope of EO within OpenDEA. **(Full prose — Phase 1 landed.)**
+- `TENETS.md` — numbered axioms of the discipline, derived from the ECF 7×7 axiom grid. **(Full prose — Phase 1 landed.)**
+- `axioms/` — three axiom files, each with derivation table to ECF. **(Full prose — Phase 1 landed.)**
 - `patterns/` — reusable Ontology Engineering patterns (upper-ontology conventions, profile declarations, axiomatisation depth, lifecycle). **(Stub index; bodies in Phase 5.)**
 - `sectors/` — sector-, industry-, and sub-sector-specific Enterprise Ontologies. **(Index only in Phase 1; first pair — telecom operator + cloud service provider — in Phase 2–3; fintech + healthcare via `dea-catalog-ontologies` promotion in Phase 4.)**
 - `BUILD-A-SPECIALIZED-ONTOLOGY.md` — playbook for authoring a new sector Enterprise Ontology. **(Outline in Phase 0; full prose in Phase 5.)**
@@ -46,7 +46,7 @@ OpenDEAM (root authority)
 
 ## Status
 
-This repository is a **proposal** — it ships a scaffold + the spec doc, but the substantive content (CHARTER prose, TENETS, axioms, ontology patterns, sector content) lands in subsequent phases per `change-requests/CR-EO-01.md`.
+**Phase 1 (grounding docs) has landed** — CHARTER + TENETS + three axioms with full ECF derivation are present. Phase 2 onward per `change-requests/CR-EO-01.md`.
 
 **Visibility:** private at land; promoted to public after Phase 1 ships.
 

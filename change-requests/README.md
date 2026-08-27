@@ -3,6 +3,7 @@
 | CR | Title | Status | Date | PR |
 |----|-------|--------|------|----|
 | [CR-EO-01](./CR-EO-01.md) | Enterprise Ontology — umbrella / spec proposal | Proposed | 2026-08-26 | (Phase 0) |
+| [CR-EO-01](./CR-EO-01.md) Phase 1 | Full grounding docs (CHARTER + TENETS + three axioms with ECF derivation) | Phase 1 PR open | 2026-08-27 | (this PR) |
 | [CR-EO-01-xref-dea-catalog-ontologies](./CR-EO-01-xref-dea-catalog-ontologies.md) | Cross-ref: CR-EO-01 ↔ dea-catalog-ontologies (Phase 4 promotion candidate) | Proposed | 2026-08-26 | (Phase 0) |
 
 ## Pipeline
